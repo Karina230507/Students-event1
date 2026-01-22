@@ -1,0 +1,47 @@
+.tagScheduled {
+    border: 1px solid #1b3f84;
+    border-radius: 4px;
+    padding: 2px 4px;
+    background: #548de68f;
+    margin: 3px;
+    color: #17518e;
+}
+
+.tagCompleted {
+    border: 1px solid #2e7d32;
+    border-radius: 4px;
+    padding: 2px 4px;
+    background: #81c7848f;
+    margin: 3px;
+    color: #1b5e20;
+}
+
+.tagCancelled {
+    border: 1px solid #d32f2f;
+    border-radius: 4px;
+    padding: 2px 4px;
+    background: #ef9a9a8f;
+    margin: 3px;
+    color: #b71c1c;
+}
+
+.x-window-default, .x-window-header-default, .x-panel-default{
+    border-color: #3a576c;
+}
+
+.x-window-header-default-top{
+    background-color: #3a576c;
+}
+
+.x-btn-default-small{
+    background-color: #3a576c;
+    border-color: #112d41;
+    background-image: none;
+}
+
+.x-btn-default-small:hover{
+    background-color: #6d93ad;
+    border-color: #112d41;
+    background-image: none;
+    transition: all 0.6s;
+}

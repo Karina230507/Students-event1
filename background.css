@@ -1,0 +1,11 @@
+
+html {
+    height: 100%;
+    background: url("https://wallpaperlayer.com/img/2015/6/gaussian-blur-wallpaper-3220-3424-hd-wallpapers.jpg")
+        no-repeat
+        center
+        center
+        fixed;
+    background-size: cover;
+    background-color: #1F1F2E;
+}

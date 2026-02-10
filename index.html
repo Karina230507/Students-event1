@@ -3,13 +3,84 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Агрегатор студенческих мероприятий</title>
+    <title>Система управления мероприятиями</title>
+    
+    <!-- Подключаем ExtJS -->
     <link rel="stylesheet" href="ext4/resources/ext-theme-neptune/ext-theme-neptune-all.css">
     <link rel="stylesheet" href="style.css">
+    
+    <!-- Подключаем скрипты -->
     <script src="ext4/ext-all.js"></script>
+    <script src="ext4/locale/ext-lang-ru.js"></script>
+    
     <script src="app.js"></script>
 </head>
 <body>
-    <!-- Содержимое приложения будет здесь -->
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <!-- Экран загрузки -->
+    <div id="loading">
+        <h2> Загрузка системы...</h2>
+        <p>Пожалуйста, подождите</p>
+        <div class="spinner"></div>
+    </div>
+
+    <style>
+        /* Стили для экрана загрузки */
+        #loading {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            font-family: Arial, sans-serif;
+            z-index: 9999;
+            background: #1a1a2e;
+            padding: 40px;
+            border-radius: 15px;
+            color: white;
+            box-shadow: 0 0 30px rgba(157, 80, 187, 0.5);
+            border: 2px solid #9d50bb;
+        }
+        
+        #loading h2 {
+            color: #b19cd9;
+            margin-bottom: 15px;
+        }
+        
+        #loading p {
+            color: #d8bfd8;
+            margin-bottom: 20px;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #6e48aa;
+            border-top: 4px solid #9d50bb;
+            border-radius: 50%;
+            margin: 0 auto;
+            animation: spin 1s linear infinite;
+        }
+        
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    
+    <script>
+        // Экран загрузки показывается 3 секунды
+        setTimeout(function() {
+            var loading = document.getElementById('loading');
+            loading.style.opacity = '0';
+            loading.style.transition = 'opacity 0.5s';
+            
+            setTimeout(function() {
+                loading.style.display = 'none';
+            }, 500);
+        }, 3000);
+    </script>
 </body>
 </html>
